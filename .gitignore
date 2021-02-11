@@ -102,3 +102,10 @@ dist
 
 # TernJS port file
 .tern-port
+
+# MAC DB
+.DS_Store
+
+# PM2 config files
+ecosystem.config.js
+
