@@ -1,0 +1,22 @@
+{
+  "name": "link-preview-lite",
+  "version": "1.0.0",
+  "description": "This is a NodeJS server that generates a link preview based only on info in the meta tags.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mklilley/link-preview-lite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mklilley/link-preview-lite/issues"
+  },
+  "homepage": "https://github.com/mklilley/link-preview-lite#readme",
+  "dependencies": {
+    "metaget": "^1.0.7"
+  }
+}
