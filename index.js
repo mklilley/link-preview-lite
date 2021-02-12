@@ -16,7 +16,8 @@ const port = process.env.PORT || 7000;
 
 const headers = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Methods": "OPTIONS, POST",
+  "Access-Control-Allow-Methods":
+    "HEAD, GET, POST, PUT, DELETE, OPTIONS, TRACE",
   "Access-Control-Max-Age": 2592000, // 30 days
   "Content-Type": "application/json",
 };
