@@ -25,11 +25,7 @@ const headers = {
 const requestHandler = (req, res) => {
   let data = [];
 
-  if (req.method === "OPTIONS") {
-    res.writeHead(204, headers);
-    res.end();
-    return;
-  } else {
+  if (req.method === "POST") {
     req.on("data", (chunk) => {
       data.push(chunk);
     });
@@ -103,6 +99,9 @@ const requestHandler = (req, res) => {
         }
       }
     });
+  } else {
+    res.writeHead(204, headers);
+    res.end();
   }
 };
 
