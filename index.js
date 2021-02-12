@@ -21,12 +21,6 @@ const headers = {
   "Content-Type": "application/json",
 };
 
-if (req.method === "OPTIONS") {
-  res.writeHead(204, headers);
-  res.end();
-  return;
-}
-
 const requestHandler = (req, res) => {
   let data = [];
 
