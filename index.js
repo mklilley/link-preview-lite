@@ -14,6 +14,13 @@ const got = require("got");
 const http = require("http");
 const port = process.env.PORT || 7000;
 
+const headers = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "OPTIONS, POST, GET",
+  "Access-Control-Max-Age": 2592000, // 30 days
+  "Content-Type": "application/json",
+};
+
 const requestHandler = (req, res) => {
   let data = [];
 
@@ -28,14 +35,12 @@ const requestHandler = (req, res) => {
       url = jsonBody.url;
     } catch (error) {
       console.log("ERROR: Request body not JSON");
-      res.statusCode = 400;
-      res.setHeader("Content-Type", "application/json");
+      res.writeHead(400, headers);
       res.end(JSON.stringify({ error: "Request body not JSON" }));
     }
     if (url === undefined) {
       console.log("ERROR: There is no url key in the json body");
-      res.statusCode = 400;
-      res.setHeader("Content-Type", "application/json");
+      res.writeHead(400, headers);
       res.end(
         JSON.stringify({
           error: "Request body does not contain url key, i.e. {'url': ...}",
@@ -79,13 +84,11 @@ const requestHandler = (req, res) => {
               "http://www.globaltrack.in/assets/testimonial_images/no-image-800x800.jpg",
           };
         }
-        res.statusCode = 200;
-        res.setHeader("Content-Type", "application/json");
+        res.writeHead(200, headers);
         res.end(JSON.stringify(previewData));
       } else {
         console.log("ERROR: There is no URL in the json body");
-        res.statusCode = 400;
-        res.setHeader("Content-Type", "application/json");
+        res.writeHead(400, headers);
         res.end(
           JSON.stringify({
             error: "Request body does not contain a valid URL",
