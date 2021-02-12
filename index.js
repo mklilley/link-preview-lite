@@ -19,6 +19,7 @@ const headers = {
   "Access-Control-Allow-Methods":
     "HEAD, GET, POST, PUT, DELETE, OPTIONS, TRACE",
   "Access-Control-Max-Age": 2592000, // 30 days
+  "Access-Control-Allow-Headers": "Content-Type",
   "Content-Type": "application/json",
 };
 
