@@ -15,8 +15,8 @@ It returns json with the link preview data in the form:
 title: "Example page",
 description "This is an example page",
 image: "https://example.com/img/image.png",
-domain: "example.com"
-
+domain: "example.com",
+url: "https://example.com"
 }
 ```
 

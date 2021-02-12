@@ -72,8 +72,9 @@ const requestHandler = (req, res) => {
               previewData.image ||
               "http://www.globaltrack.in/assets/testimonial_images/no-image-800x800.jpg";
 
-            // Add domain to preview.
+            // Add domain and url to preview.
             previewData.domain = nodeUrl.hostname;
+            previewData.url = urls[0];
           } catch (error) {
             console.log(error);
             console.log(
@@ -83,6 +84,7 @@ const requestHandler = (req, res) => {
               title: nodeUrl.hostname,
               description: urls[0],
               domain: nodeUrl.hostname,
+              url: urls[0],
               image:
                 "http://www.globaltrack.in/assets/testimonial_images/no-image-800x800.jpg",
             };
