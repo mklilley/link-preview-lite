@@ -70,7 +70,7 @@ const requestHandler = (req, res) => {
             previewData.title = previewData.title || nodeUrl.hostname;
             previewData.image =
               previewData.image ||
-              "http://www.globaltrack.in/assets/testimonial_images/no-image-800x800.jpg";
+              "https://swipee.lilley.io/swipe-no-preview.png";
 
             // Add domain and url to preview.
             previewData.domain = nodeUrl.hostname;
@@ -85,8 +85,7 @@ const requestHandler = (req, res) => {
               description: urls[0],
               domain: nodeUrl.hostname,
               url: urls[0],
-              image:
-                "http://www.globaltrack.in/assets/testimonial_images/no-image-800x800.jpg",
+              image: "https://swipee.lilley.io/swipe-no-preview.png",
             };
           }
           res.writeHead(200, headers);
