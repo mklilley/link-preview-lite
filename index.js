@@ -15,7 +15,8 @@ const http = require("http");
 const port = process.env.PORT || 7000;
 
 const headers = {
-  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Origin":
+    "https://swipee.lilley.io, https://dev.lilley.io",
   "Access-Control-Allow-Methods":
     "HEAD, GET, POST, PUT, DELETE, OPTIONS, TRACE",
   "Access-Control-Max-Age": 2592000, // 30 days
