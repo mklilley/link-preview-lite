@@ -4,19 +4,19 @@ This is a NodeJS server that generates a link preview based on information in th
 
 The server expects a post request with a JSON body in the form:
 
-```
-{url : "https://example.com"}
+```json
+{"url" : "https://example.com"}
 ```
 
 It returns json with the link preview data in the form:
 
 ```
 {
-title: "Example page",
-description "This is an example page",
-image: "https://example.com/img/image.png",
-domain: "example.com",
-url: "https://example.com"
+"title": "Example page",
+"description": "This is an example page",
+"image": "https://example.com/img/image.png",
+"domain": "example.com",
+"url": "https://example.com"
 }
 ```
 
