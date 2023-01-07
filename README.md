@@ -10,7 +10,7 @@ The server expects a post request with a JSON body in the form:
 
 It returns json with the link preview data in the form:
 
-```
+```json
 {
 "title": "Example page",
 "description": "This is an example page",
